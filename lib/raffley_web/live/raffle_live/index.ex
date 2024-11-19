@@ -22,6 +22,8 @@ defmodule RaffleyWeb.RaffleLive.Index do
     """
   end
 
+  attr :raffle, Raffley.Raffle
+
   def raffle(assigns) do
     ~H"""
     <div class="card">
