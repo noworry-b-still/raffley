@@ -9,7 +9,7 @@ defmodule Raffley.Raffles do
         id: 1,
         prize: "Autographed Jersey",
         ticket_price: 3,
-        status: "open",
+        status: :open,
         image_path: "images/jersey.jpg",
         description: "Step up, sports fans!"
       },
@@ -17,7 +17,7 @@ defmodule Raffley.Raffles do
         id: 2,
         prize: "Coffe With A Yeti",
         ticket_price: 5,
-        status: "open",
+        status: :upcoming,
         image_path: "images/yeti-coffee.jpg",
         description: "A super-chill coffee date."
       },
@@ -25,7 +25,7 @@ defmodule Raffley.Raffles do
         id: 3,
         prize: "Vintage Comic Book",
         ticket_price: 2,
-        status: "open",
+        status: :closed,
         image_path: "images/comic-book.jpg",
         description: "A rare collectible!"
       }
