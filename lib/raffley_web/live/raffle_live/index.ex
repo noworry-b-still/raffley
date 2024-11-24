@@ -18,6 +18,12 @@ defmodule RaffleyWeb.RaffleLive.Index do
     <div class="raffle-index">
       <.banner>
         <.icon name="hero-sparkles" /> Mystery Raffle Coming Soon!
+        <:details :let={vibe}>
+          To Be Revealed Tomorrow <%= vibe %>
+        </:details>
+        <:details>
+          Any Guesses ?
+        </:details>
       </.banner>
       <div class="raffles">
         <.raffle :for={raffle <- @raffles} raffle={raffle} />
@@ -26,17 +32,7 @@ defmodule RaffleyWeb.RaffleLive.Index do
     """
   end
 
-  slot :inner_block, required: true
 
-  def banner(assigns) do
-    ~H"""
-    <div class="banner">
-      <h1>
-        <%= render_slot(@inner_block) %>
-      </h1>
-    </div>
-    """
-  end
 
   attr :raffle, Raffley.Raffle
 
